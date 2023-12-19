@@ -1,0 +1,66 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TicTacToe.MainPage">
+
+    <Grid BackgroundColor="LightGray" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid for the points -->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text=" X points:" FontSize="Large"/>
+            <Label x:Name="xPoints" Grid.Row="0" Grid.Column="1" Text="0" FontSize="Large" HorizontalOptions="Center"/>
+            <Label Grid.Row="1" Grid.Column="0" Text=" O points:" FontSize="Large"/>
+            <Label x:Name="oPoints" Grid.Row="1" Grid.Column="1" Text="0" FontSize="Large" HorizontalOptions="Center"/>
+
+            <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End"/>
+            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End"/>
+
+            <BoxView Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" WidthRequest="1" BackgroundColor="Black" HorizontalOptions="End"/>
+        </Grid>
+
+        <!-- Grid for the buttons -->
+        <Grid Grid.Row="1" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name = "button1" ClassId="button1" Grid.Row="0" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button2" ClassId="button2" Grid.Row="0" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button3" ClassId="button3" Grid.Row="0" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button4" ClassId="button4" Grid.Row="1" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button5" ClassId="button5" Grid.Row="1" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button6" ClassId="button6" Grid.Row="1" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button7" ClassId="button7" Grid.Row="2" Grid.Column="0" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button8" ClassId="button8" Grid.Row="2" Grid.Column="1" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+            <Button x:Name = "button9" ClassId="button9" Grid.Row="2" Grid.Column="2" BackgroundColor="White" TextColor="Black" FontSize= "100"/>
+
+            <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" />
+            <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="Black" VerticalOptions="End" />
+
+            <BoxView Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" WidthRequest="1" BackgroundColor="Black" HorizontalOptions="End" />
+            <BoxView Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" WidthRequest="1" BackgroundColor="Black" HorizontalOptions="End" />
+        </Grid>
+    </Grid>
+
+</ContentPage>
